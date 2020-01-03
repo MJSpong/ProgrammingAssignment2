@@ -1,7 +1,7 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Define a function whose argument is a matrix to be cached, and whose output is a list of four functions.   
+## The set and get functions set and print the cached matrix. The setsolve function allows you to cache an 
+## inverse matrix, and the getsolve function prints it.
 
-## Write a short comment describing this function
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -17,7 +17,9 @@ makeCacheMatrix <- function(x = matrix()) {
        getsolve = getsolve)
 }
 
-
+## Define a function whose argument is the output list of the makeCacheMatrix function. It checks to see
+## if there is already a cached inverse matrix. If not, it retrieves the original cached matrix and calculates 
+## the inverse. It puts the inverse matrix into the cache, and then prints it.
 
 cacheSolve <- function(x, ...) {
   m <- x$getsolve()
